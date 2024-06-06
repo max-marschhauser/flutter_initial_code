@@ -8,7 +8,7 @@ THEME
 SPLASH SCREEN
 - packages: flutter_native_splash
 - files flutter_native_splash.yaml && assets/images/splash_screen.png
-- in main.dart in main() in needs ensureInitialized and FlutterNativeSplash.preserve before runApp() and FlutterNativeSplash.remove after runApp()
+- in main.dart in main() in needs WidgetsFlutterBinding.ensureInitialized(); and FlutterNativeSplash.preserve() before runApp() and FlutterNativeSplash.remove() after runApp()
 WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
 FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
