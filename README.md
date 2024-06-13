@@ -1,7 +1,8 @@
 ROUTER
-- packages: go_router, collection(for browser tab title)
+- packages: go_router, collection(for browser tab title), url_strategy(for removing # in url which shows because this is SPA)
 - files: config/router_manager
 - in main.dart in build it needs MaterialApp.router with routerConfig: APPRouterManager.shared.router
+- in main.dart, add setPathUrlStrategy();
 
 THEME
 
