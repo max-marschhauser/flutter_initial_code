@@ -5,16 +5,16 @@ import '../../common_router_files/element_routes.dart';
 import '../app_route.dart';
 import '../app_routes.dart';
 
-enum APPMainRoute with MainGRRouteSegment {
-  main,
-  main2,
+enum APPHomeRoute with MainGRRouteSegment {
+  home,
+  home2,
   ;
 
   @override
   String get path {
     switch (this) {
-      case main:
-      case main2:
+      case home:
+      case home2:
         return name;
     }
   }
@@ -22,30 +22,30 @@ enum APPMainRoute with MainGRRouteSegment {
   @override
   String get localization {
     switch (this) {
-      case main:
-      case main2:
+      case home:
+      case home2:
         return "browser title";
     }
   }
 
   @override
-  List<APPMainRoute> get subRoutes {
+  List<APPHomeRoute> get subRoutes {
     switch (this) {
-      case main:
-        return [main2];
-      case main2:
+      case home:
+        return [home2];
+      case home2:
         return [];
     }
   }
 
   List<MainGRRouteSegment> get rootRoutes => [
-        main,
+        home,
       ];
 
   String get goRoutePath => rootRoutes.contains(this) ? "/$path" : path;
 
   @override
-  String get fullPath => getFullPath(APPMainRoute.values);
+  String get fullPath => getFullPath(APPHomeRoute.values);
 
   APPRoute get erRoute => APPRoute(
         displayName: localization,
@@ -59,19 +59,19 @@ enum APPMainRoute with MainGRRouteSegment {
       path: goRoutePath,
       pageBuilder: (context, state) {
         switch (this) {
-          case main:
+          case home:
             return NoTransitionPage(
               child: Title(
                 title: appAppRoutes.browserTitleFromFullPath(state.fullPath ?? appAppRoutes.rootPath) ?? '',
                 color: Theme.of(context).primaryColor,
                 child: GestureDetector(
                     onTap: () {
-                      context.go(APPMainRoute.main2.fullPath);
+                      context.go(APPHomeRoute.home2.fullPath);
                     },
                     child: const Text("app route widget")),
               ),
             );
-          case main2:
+          case home2:
             return NoTransitionPage(
               child: Title(
                 title: appAppRoutes.browserTitleFromFullPath(state.fullPath ?? appAppRoutes.rootPath) ?? '',

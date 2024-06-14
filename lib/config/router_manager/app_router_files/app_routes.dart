@@ -10,7 +10,7 @@ class APPAppRoutes with MainWBRoutes {
 
   @override
   List<MainWBRoute> get routes => [
-        ...APPMainRoute.values.map((e) => e.erRoute),
+        ...APPHomeRoute.values.map((e) => e.erRoute),
       ];
 }
 
