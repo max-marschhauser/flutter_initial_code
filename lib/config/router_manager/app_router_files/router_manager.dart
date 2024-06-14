@@ -26,5 +26,9 @@ class APPRouterManager {
       }
       return null;
     },
+    errorBuilder: (BuildContext context, GoRouterState state) {
+      context.go(APPHomeRoute.home.fullPath);
+      return const SizedBox();
+    },
   );
 }
