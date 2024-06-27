@@ -1,6 +1,6 @@
 import '../common_router_files/element_routes.dart';
 import '../common_router_files/main_route.dart';
-import 'app_routes/main_routes.dart';
+import 'app_routes/home_routes.dart';
 
 APPAppRoutes appAppRoutes = APPAppRoutes();
 

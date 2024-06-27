@@ -1,10 +1,6 @@
-ROUTER
+ROUTER and THEME
 - packages: go_router, collection(for browser tab title), url_strategy(for removing # in url which shows because this is SPA)
-- files: config/router_manager
-- in main.dart in build it needs MaterialApp.router with routerConfig: APPRouterManager.shared.router
-- in main.dart, add setPathUrlStrategy();
-
-THEME
+- files: config folder, main.dart
 
 SPLASH SCREEN
 - packages: flutter_native_splash
@@ -16,4 +12,4 @@ SPLASH SCREEN
   FlutterNativeSplash.remove();
 
 FlutterNativeSplash.remove();
-- run command: dart run flutter_native_splash:create
+- run command: **dart run flutter_native_splash:create**
